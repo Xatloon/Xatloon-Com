@@ -13,7 +13,7 @@ export default function FooterText() {
                 </Grid>
                 <Grid xs={12} justify='center'>
                     <Text>
-                        © 2022 XiangNorth. All rights reserved.
+                        © 2022 XiangNorth. All rights reserved. <a href="https://beian.miit.gov.cn/">湘ICP备2022014872号</a>.
                     </Text>
                 </Grid>
             </Grid.Container>
