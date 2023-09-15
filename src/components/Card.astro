@@ -11,8 +11,8 @@ interface Props {
 const { title, description, image, url, date, tags } = Astro.props;
 ---
 <a href={url}>
-<div class="relative bg-origin-border rounded-3xl p-2 h-60 bg-cover" style=`background-image: url(${image});`>
-			<div class="absolute bottom-0 rounded-b-3xl left-0 bg-[#ffffff]/[.25] backdrop-blur-[33px] w-full p-2">
+<div class="relative rounded-3xl aspect-[4/3] ring-white ring-1 shadow-xl" style="background-image: url(./background.jpg);">
+			<div class="absolute bottom-0 rounded-b-3xl left-0 w-full p-2 bg-white">
 				<div class="text-md font-bold">
 					{title}
 				</div>
