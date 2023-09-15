@@ -29,11 +29,11 @@ const projects = [
 ];
 ---
 <main>
-	<display class="flex flex-col relative bg-[#fffcec] pb-12">
-		<div class="h-10 w-full absolute -top-6 left-0" style="background-image: url(./decoration.svg)"></div>
+	<display class="flex flex-col relative bg-[#fffcec] pb-12 px-6">
+		<div class="h-10 w-full absolute -top-10 left-0" style="background-image: url(./decoration.svg)"></div>
 		<div>
-			<div class="text-xl p-4">Projects</div>
-			<div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 px-2">
+			<div class="text-xl">Projects</div>
+			<div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
 				{
 					projects.map((project) => (
 						<Card
