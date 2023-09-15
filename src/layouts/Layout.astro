@@ -1,0 +1,31 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content="✨ Coding with Love, Exploring the World."
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="apple-mobile-web-app-title" content="Xat" />
+		<title>{title}</title>
+	</head>
+	<body
+		class="bg-[#f2c03f] text-[#1B1918] subpixel-antialiased scroll-smooth"
+		style="background-image: url(./noise-light.png);"
+	>
+		<slot />
+	</body>
+</html>
