@@ -11,8 +11,8 @@ interface Props {
 const { title, description, image, url, date, tags } = Astro.props;
 ---
 <a href={url}>
-<div class="transition-all relative rounded-3xl aspect-[4/3] ring-white ring-1 shadow-md hover:shadow-xl" style="background-image: url(./background.jpg);">
-			<div class="absolute bottom-0 rounded-b-3xl left-0 w-full p-4 bg-white">
+<div class="overflow-hidden transition-all relative rounded-3xl aspect-[30/28] shadow-md hover:shadow-xl" style="background-image: url(./background.jpg);">
+			<div class="absolute bottom-0 left-0 w-full p-4 bg-white">
 				<div class="text-md font-bold">
 					{title}
 				</div>
