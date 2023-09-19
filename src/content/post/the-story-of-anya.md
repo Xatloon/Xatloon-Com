@@ -1,11 +1,12 @@
 ---
 tags:
   - post
-  - "🧑‍💻Coding"
+  - '🧑‍💻Coding'
 title: 名为 Hexo-theme-anya 的故事
 sources:
   - xlog
-summary: 楔子 大概在 2013 年的秋季，小升初的我开始对 Lofter 有限的自定义感觉到厌倦，开始了解
+summary:
+  楔子 大概在 2013 年的秋季，小升初的我开始对 Lofter 有限的自定义感觉到厌倦，开始了解
   WordPress，也在这途中机缘巧合第一次接触到了 DIYgod 大佬的 Amativeness（没错，当时大佬还是用的 WordPress
   平台，博客名为…
 attributes:
@@ -14,7 +15,6 @@ attributes:
 external_urls:
   - https://i.xiangnorth.com/the-story-of-anya
 date_published: 2022-06-04T00:05:00.000Z
-
 ---
 
 # 名为 Hexo-theme-anya 的故事
