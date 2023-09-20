@@ -1,5 +1,8 @@
 {
-  "extends": ["plugin:astro/recommended"],
+  "extends": [
+    "antfu",
+    "plugin:astro/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "sourceType": "module",
@@ -7,11 +10,15 @@
   },
   "overrides": [
     {
-      "files": ["*.astro"],
+      "files": [
+        "*.astro"
+      ],
       "parser": "astro-eslint-parser",
       "parserOptions": {
         "parser": "@typescript-eslint/parser",
-        "extraFileExtensions": [".astro"]
+        "extraFileExtensions": [
+          ".astro"
+        ]
       },
       "rules": {}
     }

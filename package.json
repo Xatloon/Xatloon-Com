@@ -8,7 +8,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "pull": "bun ./utils/index.ts"
+    "pull": "bun ./utils/index.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.0.0",
@@ -17,14 +19,12 @@
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.43.0",
     "@typescript-eslint/parser": "^6.7.2",
     "bun-types": "^1.0.2",
     "eslint": "^8.49.0",
     "eslint-plugin-astro": "^0.29.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
-    "prettier": "^3.0.3",
-    "prettier-config-standard": "^7.0.0",
-    "prettier-plugin-astro": "^0.12.0",
     "typescript": "^5.2.2"
   }
 }
