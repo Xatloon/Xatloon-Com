@@ -1,12 +1,11 @@
 ---
 tags:
   - post
-  - '🧑‍💻Coding'
+  - "🧑‍💻Coding"
 title: 名为 Hexo-theme-anya 的故事
 sources:
   - xlog
-summary:
-  楔子 大概在 2013 年的秋季，小升初的我开始对 Lofter 有限的自定义感觉到厌倦，开始了解
+summary: 楔子 大概在 2013 年的秋季，小升初的我开始对 Lofter 有限的自定义感觉到厌倦，开始了解
   WordPress，也在这途中机缘巧合第一次接触到了 DIYgod 大佬的 Amativeness（没错，当时大佬还是用的 WordPress
   平台，博客名为…
 attributes:
@@ -15,21 +14,20 @@ attributes:
 external_urls:
   - https://i.xiangnorth.com/the-story-of-anya
 date_published: 2022-06-04T00:05:00.000Z
----
 
-# 名为 Hexo-theme-anya 的故事
+---
 
 ## 楔子
 
 大概在 2013 年的秋季，小升初的我开始对 Lofter 有限的自定义感觉到厌倦，开始了解 WordPress，也在这途中机缘巧合第一次接触到了 DIYgod 大佬的 [Amativeness](https://github.com/DIYgod/Amativeness)（没错，当时大佬还是用的 WordPress 平台，博客名为「Anotherhome」，后面才迁移到 Hexo），这便是 [hexo-theme-sagiri](https://github.com/DIYgod/hexo-theme-sagiri) 的前身。
 
-![Anotherhome](./the-story-of-anya/anotherhome.jpeg)
+![Anotherhome](../../assets/the-story-of-anya/anotherhome.jpeg)
 
 我首先是试着更改 Amativeness 的配色（原始色为红色，对应主题概念 Amativeness 即「恋爱」，顺便一提这是我第一次学到牛津大词典都没有的单词）以符合自己风格，因为当时对 HTML CSS JavaScript 一窍不通，改色便是用的控制台找到颜色 Hex 码，在代码里直接查找并替换的「土方法」，后期因为种种原因，建站计划终归是放弃了。
 
 一晃几年后，在升入高中的同时我也开始逐渐零星学习一点前端知识，大佬也与时俱进的更新博客为 Hexo 驱动，并发布了 hexo-theme-sagiri。只记得**不知 webpack 为何物**的我对着 `*.min.js & *.css` 一通乱改，最后也误打误撞完成了一个修改版，即「sagiri-x」（现已被我当做黑历史删除）。我也试着将其发布到 GitHub 与 npmjs 上，后续的发展反而出乎我的意料。
 
-![sagiri-x](./the-story-of-anya/sagiri-x.png)
+![sagiri-x](../../assets/the-story-of-anya/sagiri-x.png)
 
 由于高中三年都是月假，加上本身没什么关注，我便很快忘了这事。高考完后的一天，我登上许久未上的微博，才发现快半年前收到了一位用户关于「sagiri-x」提的使用问题，之后，我也零星在各个平台（哔哩哔哩，QQ，etc）都发现了许多关于「sagiri-x」的留言，我才意识到，是博客上留下了这些联系方式。
 
@@ -70,11 +68,11 @@ date_published: 2022-06-04T00:05:00.000Z
 
 某一天我突然意识到，既然要做一个自己的主题，为什么不更改点特色呢。于是我选择以「anya」即「SPY×FAMILIY」中的「阿妮亚」为主题，进行了取色（图片源自 Twitter[@sc_ome](https://twitter.com/sc_ome/status/1218826941555363842)）。
 
-![Figma](./the-story-of-anya/figma.jpeg)
+![Figma](../../assets/the-story-of-anya/figma.jpeg)
 
 进行应用后主页的基本样式便形成了（顶部图片源自 pixiv[@みつなり都](https://www.pixiv.net/users/7849704)）：
 
-![Anya](./the-story-of-anya/anya.png)
+![Anya](../../assets/the-story-of-anya/anya.png)
 
 当然，目前看来「anya」仍然只是「sagiri」的换皮版本，我也不否认这点。我会在今后的过程中不断完善、提升主题特色~~（怎么听起来有点像画大饼啊）~~。
 
@@ -96,7 +94,7 @@ date_published: 2022-06-04T00:05:00.000Z
 
 顺便一提我一直以为 npm 等包管理器安装需要额外添加内容，后续查找许多资料才在 Sukka 的 [这篇博文](https://blog.skk.moe/post/hexo-5/) 里发现了是 Hexo 自身新添的特性。
 
-![Sukka](./the-story-of-anya/sukka.png)
+![Sukka](../../assets/the-story-of-anya/sukka.png)
 
 ### 跋
 

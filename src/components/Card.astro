@@ -1,14 +1,14 @@
 ---
 interface Props {
-    title: string;
-    description: string;
-    image: string;
-    url: string;
-    date: string;
-    tags: string[];
+  title: string
+  description: string
+  image: string
+  url: string
+  date: string
+  tags: string[]
 }
 
-const { title, description, image, url, date, tags } = Astro.props;
+const { title, description, url, date, tags } = Astro.props;
 ---
 <a href={url}>
 <div class="overflow-hidden transition-all relative rounded-3xl aspect-[30/28] shadow-md hover:shadow-xl" style="background-image: url(./background.jpg);">
@@ -20,7 +20,7 @@ const { title, description, image, url, date, tags } = Astro.props;
                     {date}
                 </div>
                 <div class="text-sm flex gap-1 truncate">
-                    {tags.map((tag) => (
+                    {tags.map(tag => (
                         <span>#{tag}</span>
                     ))}</div>
 				<div class="text-sm truncate">

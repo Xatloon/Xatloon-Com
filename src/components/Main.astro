@@ -1,31 +1,31 @@
 ---
-import Card from "./Card.astro";
+import Card from './Card.astro'
 
 const projects = [
-	{
-		title: "Xat's Blog",
-		date: "2021-10-10",
-		tags: ["astro", "react", "tailwindcss"],
-		description: "A blog powered by Astro.",
-		url: "https://xat-blog.vercel.app",
-		image: "https://tailwindcss.com/_next/static/media/classic-utility-jacket.82031370.jpg",
-	},
-	{
-		title: "Matebook 14 Hackintosh",
-		date: "2021-10-10",
-		tags: ["hackintosh", "matebook14"],
-		description: "A guide to install macOS on Matebook 14.",
-		url: "https://xat-blog.vercel.app",
-		image: "https://tailwindcss.com/_next/static/media/classic-utility-jacket.82031370.jpg",
-	},
-	{
-		title: "Hexo Theme Anya",
-		date: "2021-10-10",
-		tags: ["hexo", "hexo-theme"],
-		description: "A Hexo theme inspired by Anya Mochizuki.",
-		url: "https://xat-blog.vercel.app",
-		image: "https://tailwindcss.com/_next/static/media/classic-utility-jacket.82031370.jpg",
-	},
+  {
+    title: 'Xat\'s Blog',
+    date: '2021-10-10',
+    tags: ['astro', 'react', 'tailwindcss'],
+    description: 'A blog powered by Astro.',
+    url: 'https://xat-blog.vercel.app',
+    image: 'https://tailwindcss.com/_next/static/media/classic-utility-jacket.82031370.jpg',
+  },
+  {
+    title: 'Matebook 14 Hackintosh',
+    date: '2021-10-10',
+    tags: ['hackintosh', 'matebook14'],
+    description: 'A guide to install macOS on Matebook 14.',
+    url: 'https://xat-blog.vercel.app',
+    image: 'https://tailwindcss.com/_next/static/media/classic-utility-jacket.82031370.jpg',
+  },
+  {
+    title: 'Hexo Theme Anya',
+    date: '2021-10-10',
+    tags: ['hexo', 'hexo-theme'],
+    description: 'A Hexo theme inspired by Anya Mochizuki.',
+    url: 'https://xat-blog.vercel.app',
+    image: 'https://tailwindcss.com/_next/static/media/classic-utility-jacket.82031370.jpg',
+  },
 ];
 ---
 <main>
@@ -41,7 +41,7 @@ const projects = [
 			</div>
 			<div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
 				{
-					projects.map((project) => (
+					projects.map(project => (
 						<Card
 							title={project.title}
 							date={project.date}

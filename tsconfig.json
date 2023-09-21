@@ -1,10 +1,25 @@
 {
-  "extends": "astro/tsconfigs/strict",
+	"extends": "astro/tsconfigs/strict",
+	"include": ["src/**/*", "utils/**/*"],
+	"exclude": ["node_modules", "dist"],
   "compilerOptions": {
+    "lib": ["ESNext"],
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "composite": true,
+    "strict": true,
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
     "allowJs": true,
-    "types": ["bun-types"],
-    "baseUrl": "."
-  },
-  "include": ["src/**/*", "utils/**/*"],
-  "exclude": ["node_modules", "dist"]
+    "types": [
+      "bun-types"
+    ]
+  }
 }

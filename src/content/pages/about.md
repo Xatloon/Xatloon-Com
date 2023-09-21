@@ -10,11 +10,10 @@ attributes:
 external_urls:
   - https://i.xiangnorth.com/About
 date_published: 2023-03-05T18:26:23.538Z
+
 ---
 
-# About
-
-![Sakurasawa's smile](./about/sakurasawa's_smile.jpeg)
+![Sakurasawa's smile](../../assets/about/sakurasawas_smile.jpeg)
 
 ## Me？
 
@@ -27,7 +26,7 @@ This is my blog where I share the things I love, founded on love in 2011 and gro
 ## Some Details
 
 - Blog Engine: [xLog](https://xlog.app)
-- Favicon & Avatar: [宇宙栗栗](https://weibo.com/u/5496401896)
+- Favicon & Avatar:  [宇宙栗栗](https://weibo.com/u/5496401896)
 
 ## Contact Me
 
