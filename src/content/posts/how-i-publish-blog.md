@@ -84,37 +84,37 @@ blog-cicd:
   runs-on: ubuntu-latest
   env:
   TZ: Asia/Shanghai
-  steps: 
-      - name: Checkout codes
-        uses: actions/checkout@v2
+  steps:
+    - name: Checkout codes
+      uses: actions/checkout@v2
 
-      - name: Setup node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-      - name: Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}`-node-${{ hashFiles('**/package-lock.json') }}
+    - name: Setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 16.x
+    - name: Cache node modules
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}`-node-${{ hashFiles('**/package-lock.json') }}
 
-      - name: Install dependencies
-        run: |
-          npm install hexo-cli -g
-          npm install
-      - name: Generate files
-        run: hexo generate
+    - name: Install dependencies
+      run: |
+        npm install hexo-cli -g
+        npm install
+    - name: Generate files
+      run: hexo generate
 
-      - name: Deploy blog
-        run: |
-          git clone -b blog "https://${{ secrets.GH_REF }}" deploy_git
-          mv ./deploy_git/.git ./public/
-          cd ./public
-          git config user.name "XiangNorth"
-          git config user.email "i@xiangnorth.com"
-          git add .
-          git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-          git push --force --quiet "https://XiangNorth:${{ secrets.GITHUB_TOKEN }}@${{ secrets.GH_REF }}" blog:blog
+    - name: Deploy blog
+      run: |
+        git clone -b blog "https://${{ secrets.GH_REF }}" deploy_git
+        mv ./deploy_git/.git ./public/
+        cd ./public
+        git config user.name "XiangNorth"
+        git config user.email "i@xiangnorth.com"
+        git add .
+        git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+        git push --force --quiet "https://XiangNorth:${{ secrets.GITHUB_TOKEN }}@${{ secrets.GH_REF }}" blog:blog
 ```
 
 为了方便并「优雅」地部署，我使用了 `secrets.GITHUB_TOKEN` 来代替 GitHub 的 API Token，你可以在 [这篇文档](https://docs.github.com/en/actions/security-guides/automatic-token-authentication) 了解更多。

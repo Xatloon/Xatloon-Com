@@ -12,10 +12,10 @@ const { title, description, url, date, tags } = Astro.props;
 ---
 <a href={url}>
 <div class="overflow-hidden transition-all relative rounded-3xl aspect-[30/28] shadow-md hover:shadow-xl" style="background-image: url(./background.jpg);">
-			<div class="absolute bottom-0 left-0 w-full p-4 bg-white">
-				<div class="text-md font-bold truncate">
-					{title}
-				</div>
+      <div class="absolute bottom-0 left-0 w-full p-4 bg-white">
+        <div class="text-md font-bold truncate">
+          {title}
+        </div>
                 <div class="text-xs">
                     {date}
                 </div>
@@ -23,9 +23,9 @@ const { title, description, url, date, tags } = Astro.props;
                     {tags.map(tag => (
                         <span>#{tag}</span>
                     ))}</div>
-				<div class="text-sm truncate">
-					{description}
-				</div>
-			</div>
+        <div class="text-sm truncate">
+          {description}
+        </div>
+      </div>
 </div>
 </a>

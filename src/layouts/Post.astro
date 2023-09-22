@@ -3,20 +3,10 @@ import Layout from './Layout.astro'
 
 interface Props {
   title: string
-  description: string
-  image: string
-  url: string
-  date: string
-  tags: string[];  
 }
-
-const { title, description, image, url, date, tags } = Astro.props;
+const { title } = Astro.props
 ---
 
 <Layout title={title}>
-  <main>
-    <h1>{title}</h1>
-    <p>{description}</p>
-    <p>{date}</p>
-    <p>{tags}</p>
-  </main>
+  <slot />
+</Layout>
