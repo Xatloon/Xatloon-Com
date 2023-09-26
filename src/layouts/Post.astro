@@ -8,5 +8,7 @@ const { title } = Astro.props
 ---
 
 <Layout title={title}>
+  <article class='prose max-w-none dark:prose-invert'>
   <slot />
+  </article>
 </Layout>

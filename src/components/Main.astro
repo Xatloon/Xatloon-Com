@@ -4,72 +4,21 @@ import Card from './Card.astro'
 
 const posts = await getCollection('posts')
 const lastestPosts = posts.sort((a, b) => new Date(b.data.date_published).getTime() - new Date(a.data.date_published).getTime())
-  .slice(0, 3)
-const projects = [
-  {
-    title: 'Xat\'s Blog',
-    date: '2021-10-10',
-    tags: ['astro', 'react', 'tailwindcss'],
-    description: 'A blog powered by Astro.',
-    url: 'https://xat-blog.vercel.app',
-  },
-  {
-    title: 'Matebook 14 Hackintosh',
-    date: '2021-10-10',
-    tags: ['hackintosh', 'matebook14'],
-    description: 'A guide to install macOS on Matebook 14.',
-    url: 'https://xat-blog.vercel.app',
-  },
-  {
-    title: 'Hexo Theme Anya',
-    date: '2021-10-10',
-    tags: ['hexo', 'hexo-theme'],
-    description: 'A Hexo theme inspired by Anya Mochizuki.',
-    url: 'https://xat-blog.vercel.app',
-  },
-];
 ---
-<main>
-  <display class="flex flex-col relative bg-[#fffcec] pb-12 px-6">
-    <div class="h-10 w-full absolute -top-10 left-0" style="background-image: url(./decoration.svg)"></div>
-    <div class="flex flex-col gap-4">
-      <div class="border-b-2 pt-4 pb-6 text-center text-zinc-200 font-black">
-        Catch me if you can ~
+<main class="flex flex-col gap-4">
+      <div class="flex items-center text-lg font-bold">
+        <span class="i-mingcute-bling-fill"></span>
+        <span>RECENTLY PUBLISHED</span>
       </div>
-      <div class="text-xl flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="#F2C03F"><path d="M17.981 2.353a.558.558 0 0 1 1.038 0l.654 1.66c.057.143.17.257.315.314l1.659.654c.47.186.47.852 0 1.038l-1.66.654a.558.558 0 0 0-.314.315l-.654 1.659a.558.558 0 0 1-1.038 0l-.654-1.66a.558.558 0 0 0-.315-.314l-1.659-.654a.558.558 0 0 1 0-1.038l1.66-.654a.558.558 0 0 0 .314-.315l.654-1.659Z"/><path fill-rule="evenodd" d="M17 14.5a7.5 7.5 0 1 1-15 0a7.5 7.5 0 0 1 15 0Zm-5 2.25a.75.75 0 0 0 0-1.5h-2a.75.75 0 0 0 0 1.5h2Zm2-4.25c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5s.448-1.5 1-1.5s1 .672 1 1.5ZM9 14c.552 0 1-.672 1-1.5S9.552 11 9 11s-1 .672-1 1.5s.448 1.5 1 1.5Z" clip-rule="evenodd"/><path d="m16.767 8.294l-.75.75a8.555 8.555 0 0 0-1.06-1.061l.75-.75l.76.3l.3.76Z"/></g></svg>
-        Awesome projects
-      </div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div class="grid md:grid-cols-2 gap-4">
         {
-          projects.map(project => (
-            <Card
-              title={project.title}
-              date={project.date}
-              tags={project.tags}
-              description={project.description}
-              url={project.url}
-            />
-          ))
-        }
-      </div>
-      <div class="text-xl flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="#F2C03F"><path d="M17.981 2.353a.558.558 0 0 1 1.038 0l.654 1.66c.057.143.17.257.315.314l1.659.654c.47.186.47.852 0 1.038l-1.66.654a.558.558 0 0 0-.314.315l-.654 1.659a.558.558 0 0 1-1.038 0l-.654-1.66a.558.558 0 0 0-.315-.314l-1.659-.654a.558.558 0 0 1 0-1.038l1.66-.654a.558.558 0 0 0 .314-.315l.654-1.659Z"/><path fill-rule="evenodd" d="M17 14.5a7.5 7.5 0 1 1-15 0a7.5 7.5 0 0 1 15 0Zm-5 2.25a.75.75 0 0 0 0-1.5h-2a.75.75 0 0 0 0 1.5h2Zm2-4.25c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5s.448-1.5 1-1.5s1 .672 1 1.5ZM9 14c.552 0 1-.672 1-1.5S9.552 11 9 11s-1 .672-1 1.5s.448 1.5 1 1.5Z" clip-rule="evenodd"/><path d="m16.767 8.294l-.75.75a8.555 8.555 0 0 0-1.06-1.061l.75-.75l.76.3l.3.76Z"/></g></svg>
-        Recent post
-      </div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {
-          lastestPosts.map(project => (
-            <Card
+          lastestPosts.map(project => (<Card
               title={project.data.title}
-              date={new Date(project.data.date_published).toLocaleDateString()}
-              tags={project.data.tags}
+              date={new Date(project.data.date_published).toISOString().substring(0, 10)}
               description={project.data.description}
-              url={`/post${project.slug}`}
+              url={`/post/${project.slug}`}
             />
           ))
         }
       </div>
-    </div>
-  </display>
 </main>

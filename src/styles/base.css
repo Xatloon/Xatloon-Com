@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: ChillRoundGothic;
+    font-weight: 400;
+    src: url(/fonts/ChillRoundGothic_Regular.woff) format("woff");
+  }
+  @font-face {
+    font-family: ChillRoundGothic;
+    font-weight: 500;
+    src: url(/fonts/ChillRoundGothic_Medium.woff) format("woff");
+  }
+  @font-face {
+    font-family: ChillRoundGothic;
+    font-weight: 600;
+    src: url(/fonts/ChillRoundGothic_Bold.woff) format("woff");
+  }
+}

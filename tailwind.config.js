@@ -1,8 +1,21 @@
 /** @type {import('tailwindcss').Config} */
+const { iconsPlugin, getIconCollections } = require('@egoist/tailwindcss-icons')
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['ChillRoundGothic', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    iconsPlugin({
+      // Select the icon collections you want to use
+      collections: getIconCollections(['mingcute']),
+    }),
+    require('@tailwindcss/typography'),
+  ],
 }

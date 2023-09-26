@@ -4,7 +4,13 @@ import astroParser from 'astro-eslint-parser'
 import globals from 'globals'
 
 export default antfu(
-  {},
+  {
+    stylistic: true, // enable stylistic formatting rules
+    typescript: true,
+    vue: false,
+    jsonc: true,
+    yml: true,
+  },
   [
     {
       ignores: [
@@ -51,4 +57,5 @@ export default antfu(
         'prettier/prettier': 'off',
       },
     },
-  ])
+  ],
+)

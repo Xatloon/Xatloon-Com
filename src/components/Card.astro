@@ -2,30 +2,19 @@
 interface Props {
   title: string
   description: string
-  image?: string
   url: string
   date: string
-  tags: string[]
 }
 
-const { title, description, image = './background.jpg', url, date, tags } = Astro.props;
+const { title, url, date } = Astro.props;
 ---
 <a href={url}>
-<div class="overflow-hidden transition-all relative rounded-3xl aspect-[30/28] shadow-md hover:shadow-xl" style={`background-image: url(${image})`}>
-      <div class="absolute bottom-0 left-0 w-full p-4 bg-white">
+<div class="flex flex-col overflow-hidden transition-all rounded-3xl p-4 ring-1 ring-slate-200 dark:ring-slate-800  hover:ring-slate-950 dark:hover:ring-slate-50">
         <div class="text-md font-bold truncate">
           {title}
         </div>
                 <div class="text-xs">
                     {date}
                 </div>
-                <div class="text-sm flex gap-1 truncate">
-                    {tags.map(tag => (
-                        <span>#{tag}</span>
-                    ))}</div>
-        <div class="text-sm truncate">
-          {description}
-        </div>
-      </div>
 </div>
 </a>
