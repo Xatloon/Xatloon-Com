@@ -6,16 +6,15 @@ const posts = await getCollection('posts')
 const lastestPosts = posts.sort((a, b) => new Date(b.data.date_published).getTime() - new Date(a.data.date_published).getTime())
 ---
 <main class="flex flex-col gap-4">
-      <div class="flex items-center text-lg font-bold">
+      <div class="flex items-center text-lg font-bold gap-2">
         <span class="i-mingcute-bling-fill"></span>
-        <span>RECENTLY PUBLISHED</span>
+        <span class="tracking-widest">RECENTLY PUBLISHED</span>
       </div>
       <div class="grid md:grid-cols-2 gap-4">
         {
           lastestPosts.map(project => (<Card
               title={project.data.title}
               date={new Date(project.data.date_published).toISOString().substring(0, 10)}
-              description={project.data.description}
               url={`/post/${project.slug}`}
             />
           ))

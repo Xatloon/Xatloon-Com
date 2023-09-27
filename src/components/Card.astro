@@ -1,7 +1,6 @@
 ---
 interface Props {
   title: string
-  description: string
   url: string
   date: string
 }
@@ -9,7 +8,7 @@ interface Props {
 const { title, url, date } = Astro.props;
 ---
 <a href={url}>
-<div class="flex flex-col overflow-hidden transition-all rounded-3xl p-4 ring-1 ring-slate-200 dark:ring-slate-800  hover:ring-slate-950 dark:hover:ring-slate-50">
+<div class="flex flex-col overflow-hidden transition-all rounded-3xl p-4 ring-2 ring-slate-200 dark:ring-slate-800  hover:ring-slate-950 dark:hover:ring-slate-50">
         <div class="text-md font-bold truncate">
           {title}
         </div>
