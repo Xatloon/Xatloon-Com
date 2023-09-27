@@ -1,23 +1,7 @@
 ---
 tags:
-  - post
-  - "🧑‍💻Coding"
+  - "Coding"
 title: 我是如何开始发表博客的
-sources:
-  - xlog
-summary: |-
-  Prologue Lofter
-
-  在 2014 年，我在 Lofter 开始了一段时间的博客写作生活，也成为了上面的首批用户。
-
-  有幸被 Wayback Manchine 收录了一张快照。
-
-  那时刚接触 Android，也就是我人生的第一台属于自己的安卓手机——「中兴 U793…
-attributes:
-  - value: how-i-publish-blog
-    trait_type: xlog_slug
-external_urls:
-  - https://i.xiangnorth.com/how-i-publish-blog
 date_published: 2019-03-03T23:48:00.000Z
 
 ---

@@ -1,21 +1,7 @@
 ---
 tags:
-  - post
-  - "🧑‍💻Coding"
+  - "Coding"
 title: ChatGPT 使用之旅
-sources:
-  - xlog
-summary: >-
-  Intro. 去年年末开始，逐渐在 Twitter 上见到许多关于 ChatGPT
-  的话题，再体验一段时间过后，仿佛大梦初醒一般，已意识到市面上已经出现许许多多 AI 产品。
-
-
-  有早先关注到的 AI 作画 Disco Diffusion…
-attributes:
-  - value: chatgpt-for-me
-    trait_type: xlog_slug
-external_urls:
-  - https://i.xiangnorth.com/chatgpt-for-me
 date_published: 2023-03-04T00:02:34.000Z
 
 ---
