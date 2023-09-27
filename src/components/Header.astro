@@ -7,29 +7,21 @@
     <img src="/profile.webp" alt="Xat's avatar." class="w-10 h-10 rounded-full shadow-xl ring-slate-200 ring-2"/>
   </a>
     <div class="h-14 items-center flex gap-2 text-xl">
-            <div id="theme-toggle" class="flex items-center rounded-full bg-slate-100/75 dark:bg-slate-900/75 backdrop-blur-md h-10 w-14 justify-center shadow-xl ring-slate-200 dark:ring-slate-800 ring-1">
+            <div id="theme-toggle" class="flex items-center cursor-pointer rounded-full bg-slate-100/75 dark:bg-slate-900/75 backdrop-blur-md h-10 w-14 justify-center shadow-xl ring-slate-200 dark:ring-slate-800 ring-1">
               <span class="i-mingcute-sun-line dark:i-mingcute-moon-stars-line"></span>
             </div>
     </div>
 </header>
 
-<script>
-  const themeToggle = document.querySelector('#theme-toggle');
+<script is:inline>
   if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     document.documentElement.classList.add('dark')
   } else {
     document.documentElement.classList.remove('dark')
   }
-  function toggleTheme() {
-    if (localStorage.theme === 'dark') {
-      localStorage.theme = 'light'
-      document.documentElement.classList.remove('dark')
-    } else {
-      localStorage.theme = 'dark'
-      document.documentElement.classList.add('dark')
-    }
-  }
-  if (themeToggle) {
-    themeToggle.addEventListener('click', toggleTheme)
-  }
+  const themeToggle = document.querySelector('#theme-toggle');
+  themeToggle.addEventListener('click', function () {
+      document.documentElement.classList.toggle('dark');
+      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    });
 </script>
