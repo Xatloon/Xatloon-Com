@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Chill Round Gothic', ...defaultTheme.fontFamily.sans],
+        sans: ['ChillRoundGothic', ...defaultTheme.fontFamily.sans],
       },
     },
   },
