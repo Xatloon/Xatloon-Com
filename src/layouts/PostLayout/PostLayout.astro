@@ -1,0 +1,28 @@
+---
+import Layout from '@/layouts/BaseLayout/BaseLayout.astro'
+
+interface Props {
+  title: string
+  tags?: string[] | undefined
+  publishedAt: string
+}
+
+const { title, tags, publishedAt } = Astro.props
+---
+
+<Layout title={`Xat - ${title}`}>
+  <h2 class="bg-gradient-to-r from-fuchsia-600 via-orange-600 to-pink-600 bg-clip-text text-4xl font-black leading-loose dark:text-transparent">{title}</h2>
+  <div class="flex items-center gap-6 text-sm text-slate-500">
+  <div class="flex items-center gap-2">
+    <span class="i-mingcute-tag-line"></span>
+    {tags?.map(tag => (<span>{tag}</span>))}
+  </div>
+  <div class="flex items-center gap-2">
+    <span class="i-mingcute-quill-pen-line"></span>
+    <span>{publishedAt}</span>
+  </div>
+  </div>
+  <article class="prose max-w-none dark:prose-invert">
+  <slot />
+  </article>
+</Layout>

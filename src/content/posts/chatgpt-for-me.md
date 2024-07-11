@@ -1,9 +1,10 @@
 ---
-tags:
-  - "Coding"
 title: ChatGPT 使用之旅
-date_published: 2023-03-04T00:02:34.000Z
-
+category: "Coding"
+tags:
+  - "AI"
+  - "ChatGPT"
+publishedAt: 2023-03-04T00:02:34.000Z
 ---
 
 ## Intro.
@@ -21,8 +22,7 @@ date_published: 2023-03-04T00:02:34.000Z
 ## Who is ChatGPT?
 
 > ChatGPT is a sibling model to [InstructGPT](https://openai.com/blog/instruction-following/)
-, which is trained to follow an instruction in a prompt and provide a detailed response.
-> 
+> , which is trained to follow an instruction in a prompt and provide a detailed response.
 
 简单来讲就是一个可以按照你的指令提供详细回应的语言模型。
 

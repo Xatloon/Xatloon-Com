@@ -1,8 +1,10 @@
 ---
+category: "Coding"
 tags:
-  - "Coding"
+  - "Blog"
+  - "Hexo"
 title: 我是如何开始发表博客的
-date_published: 2019-03-03T23:48:00.000Z
+publishedAt: 2019-03-03T23:48:00.000Z
 
 ---
 
@@ -22,7 +24,7 @@ date_published: 2019-03-03T23:48:00.000Z
 
 ### WordPress
 
-![WordPress](../../assets/how-i-publish-blog/wordpress.png)
+![WordPress](@/assets/how-i-publish-blog/wordpress.png)
 
 大名鼎鼎的 [WordPress](https://wordpress.com/)，是我**第一个**个人网站的框架。
 
@@ -36,7 +38,7 @@ date_published: 2019-03-03T23:48:00.000Z
 
 ### Hexo
 
-![W0LtZ0](../../assets/how-i-publish-blog/w0ltz0.png)
+![W0LtZ0](@/assets/how-i-publish-blog/w0ltz0.png)
 
 最后归宿来到了 [Hexo](https://hexo.io/)，是一个非常「简单」的博客框架。
 
@@ -53,7 +55,6 @@ date_published: 2019-03-03T23:48:00.000Z
 ### CI/CD
 
 > 在软件工程中，CI/CD 或 CICD 通常指的是持续集成和持续交付或持续部署的组合实践。CI/CD 通过在应用程序的构建、测试和部署中实施自动化，在开发和运营团队之间架起了桥梁。
-> 
 
 在这里，主要是介绍 [GitHub Actions](https://github.com/features/actions) 在部署我的博客中的使用，**不会**涉及 Hexo 怎么配置，怎么上传到。
 
@@ -114,7 +115,7 @@ blog-cicd:
 
 ### Words
 
-![VS Code](../../assets/how-i-publish-blog/vs_code.png)
+![VS Code](@/assets/how-i-publish-blog/vs_code.png)
 
 得益于 VS Code 强大的拓展性，我可以轻松地在其中进行 Markdown 的写作的同时进行预览。
 
@@ -124,7 +125,7 @@ blog-cicd:
 
 我的博客文章图片的解决方案是「GitHub」+「jsDelivr CDN」，即将图片上传至我的图片专用仓库，然后通过 jsDelivr CDN 加载。
 
-![uPic](../../assets/how-i-publish-blog/upic.png)
+![uPic](@/assets/how-i-publish-blog/upic.png)
 
 我使用的上传工具为「uPic」, 它是一款开源的 macOS 软件，你可以去他的 [GitHub 主页](https://github.com/gee1k/uPic) 开始使用或支持开发者。
 
@@ -145,8 +146,8 @@ blog-cicd:
 
 在平时的阅读中也见过很多大佬或漂亮或优雅的页面，如[「Tobias Ahlin」](https://tobiasahlin.com/blog/)和[「Josh W Comeau」](https://www.joshwcomeau.com/)。
 
-![Tobias Ahlin](../../assets/how-i-publish-blog/tobias_ahlin.png)
+![Tobias Ahlin](@/assets/how-i-publish-blog/tobias_ahlin.png)
 
-![Josh W Comeau](../../assets/how-i-publish-blog/josh_w_comeau.png)
+![Josh W Comeau](@/assets/how-i-publish-blog/josh_w_comeau.png)
 
 总之岁月静好，还有很多时间，我们慢慢来。

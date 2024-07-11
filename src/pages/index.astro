@@ -1,10 +1,60 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Intro from '../components/Intro.astro'
-import Main from '../components/Main.astro'
+import { getCollection } from 'astro:content'
+import Layout from '@/layouts/BaseLayout/BaseLayout.astro'
+import Intro from '@/components/Intro.astro'
+import Card from '@/components/Card.astro'
+
+const posts = await getCollection('posts')
+const lastestPosts = posts.sort((a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime())
+const lastestProjects = [{
+  title: 'Matebook-14-2019-Hackintosh',
+  description: '🚀 Transform your MateBook 14 2019 into a Hackintosh',
+  url: 'https://github.com/Xatloon/Matebook-14-2019-Hackintosh',
+}, {
+  title: 'Hexo-theme-anya',
+  description: '🧝‍♀️ A Hexo theme with both "lovely" and "elegant"',
+  url: 'https://github.com/Xatloon/Hexo-theme-anya',
+}, {
+  title: 'OpenCat.app',
+  description: '👨‍🎨 Redesign OpenCat website',
+  url: 'https://github.com/waylybaye/opencat.app',
+}]
 ---
 
 <Layout title="Hi, Xat!">
   <Intro />
-  <Main />
+  <main class="flex -translate-y-12 flex-col gap-4 rounded-t-xl bg-slate-50 p-6">
+      <div class="flex items-center gap-2 text-lg font-bold">
+        <span class="i-mingcute-quill-pen-fill"></span>
+        <span class="capitalize">recently published</span>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2">
+        {
+          lastestPosts.map(project => (
+<Card
+  title={project.data.title}
+  subtitle={new Date(project.data.publishedAt).toISOString().substring(0, 10)}
+  url={`/post/${project.slug}`}
+/>
+          ))
+        }
+      </div>
+      <div class="flex items-center gap-2 text-lg font-bold">
+        <span class="i-mingcute-rocket-fill"></span>
+        <span class="capitalize">latest projects</span>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2">
+        {
+          lastestProjects.map(project => (
+<Card
+  title={project.title}
+  subtitle={project.description}
+  url={project.url}
+  showRedirect
+/>
+))
+        }
+      </div>
+</main>
+
 </Layout>
