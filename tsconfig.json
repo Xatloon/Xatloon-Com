@@ -9,6 +9,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
+    "types": ["vite-plugin-font/src/font"],
     "allowImportingTsExtensions": false,
     "noPropertyAccessFromIndexSignature": true,
     "downlevelIteration": true,
