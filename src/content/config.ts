@@ -11,24 +11,6 @@ const postCollection = defineCollection({
   }),
 })
 
-const pagesCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string(),
-    slug: z.string(),
-  }),
-})
-
-const i18nCollection = defineCollection({
-  type: 'data',
-  schema: z.object({
-    locale: z.string(),
-    translations: z.record(z.string()),
-  }),
-})
-
 export const collections = {
   posts: postCollection,
-  pages: pagesCollection,
-  i18n: i18nCollection,
 }
