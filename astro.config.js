@@ -11,7 +11,7 @@ export default defineConfig({
   }), mdx()],
   vite: {
     plugins: [viteFont({
-      scanFiles: ['src/**/*', 'tailwind.config.js'],
+      scanFiles: ['src/**/*'],
     })],
   },
 })
