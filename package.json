@@ -1,31 +1,33 @@
 {
-  "name": "astro-xlog",
+  "name": "xatloon-com",
   "type": "module",
   "version": "0.0.1",
+  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@astrojs/check": "^0.8.1",
+    "@astrojs/mdx": "^3.1.2",
     "@astrojs/tailwind": "^5.1.0",
-    "@egoist/tailwindcss-icons": "^1.7.4",
-    "@iconify-json/mingcute": "^1.1.16",
-    "astro": "^4.5.7",
-    "mdast-util-to-string": "^4.0.0",
-    "reading-time": "^1.5.0",
-    "sharp": "^0.33.2",
-    "tailwindcss": "^3.4.1"
+    "@egoist/tailwindcss-icons": "^1.8.1",
+    "@iconify-json/mingcute": "^1.1.18",
+    "astro": "^4.11.5",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss": "^3.4.4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.8.3",
-    "@tailwindcss/typography": "^0.5.10",
+    "@antfu/eslint-config": "^2.22.0",
+    "@tailwindcss/typography": "^0.5.13",
+    "@types/bun": "^1.1.6",
     "eslint": "^8.57.0",
-    "eslint-plugin-astro": "^0.32.0",
-    "typescript": "^5.4.2"
+    "eslint-plugin-astro": "^1.2.3",
+    "eslint-plugin-format": "^0.1.2",
+    "eslint-plugin-tailwindcss": "^3.17.4",
+    "typescript": "^5.5.3",
+    "vite-plugin-font": "^1.3.0"
   }
 }

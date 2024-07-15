@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets'
+import AvatarJpeg from '@/assets/image/avatar.jpeg'
+---
+
+<header class="fixed z-50 flex w-full items-center justify-between p-6">
+  <Image
+    class="size-10 rounded-full shadow-xl ring-1 ring-slate-200"
+    src={AvatarJpeg}
+    alt="Avatar"
+  />
+  <div class="flex h-14 items-center gap-2 text-xl">
+    <button id="theme-toggle" class="flex h-10 w-14 cursor-pointer items-center justify-center rounded-full bg-slate-100/75 shadow-xl ring-1 ring-slate-200 backdrop-blur-md dark:bg-slate-900/75 dark:ring-slate-800">
+      <span class="i-mingcute-sun-line dark:i-mingcute-moon-stars-line"></span>
+    </button>
+  </div>
+</header>
+

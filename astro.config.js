@@ -1,16 +1,17 @@
 /** @type {import('astro').AstroConfig} */
 import { defineConfig } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
-import { readingTime } from './utils/reading-time.js'
+import viteFont from 'vite-plugin-font'
+import mdx from '@astrojs/mdx'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(
-    {
-      applyBaseStyles: false,
-    },
-  )],
-  markdown: {
-    remarkPlugins: [readingTime],
+  integrations: [tailwind({
+    applyBaseStyles: false,
+  }), mdx()],
+  vite: {
+    plugins: [viteFont({
+      scanFiles: ['src/**/*'],
+    })],
   },
 })

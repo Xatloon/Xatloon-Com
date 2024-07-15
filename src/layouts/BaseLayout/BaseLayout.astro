@@ -1,0 +1,34 @@
+---
+import Footer from '@/layouts/BaseLayout/Footer.astro'
+import Header from '@/layouts/BaseLayout/Header.astro'
+import Meta from '@/layouts/BaseLayout/Meta.astro'
+import { css } from '@/assets/font/ChillRoundGothic_Regular.otf'
+import '@/styles/base.css'
+
+interface Props {
+  title: string
+  description?: string
+}
+
+const { title, description } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Meta description={description} />
+    <title>{title}</title>
+  </head>
+  <body
+    class="min-h-screen scroll-smooth bg-slate-50 bg-fixed text-slate-950 subpixel-antialiased"
+    style={{
+      fontFamily: css.family,
+    }}
+  >
+    <Header />
+    <content class="flex flex-col gap-8">
+      <slot />
+    </content>
+    <Footer />
+  </body>
+</html>

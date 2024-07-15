@@ -1,19 +1,20 @@
-<intro
-  class="flex flex-col p-4 gap-4 md:px-0 md:ring-0 md:hover:ring-0 rounded-xl transition-all ring-2 ring-slate-200 dark:ring-slate-800 hover:ring-slate-950 dark:hover:ring-slate-50"
+---
+import HarvestCoverJpg from '@/assets/image/harvest-fields-in-westerham.jpg';
+---
+
+<section
+  class="flex flex-col gap-4 bg-cover p-6 pt-24 transition-all"
+  style={{
+    backgroundImage: `url(${HarvestCoverJpg.src})`,
+  }}
 >
-<h2 class="text-xl font-medium text-blue-500">Xat Loon</h2>
-<p>
-    I'm a<br />
-    - <span
-      class="font-mono"
-      >Frontend</span> Developer,<br />
-    - <span class="text-[#3139FB]">Inspired</span> Designer,<br />
-    - <span class="font-bold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-600 to-pink-600">Mysterious</span> Magician,<br />
-    - 👨‍🎓 Student...
-</p>
-<div class="flex gap-4 text-xl">
+<legend>
+  <h2 class="text-4xl">✨</h2>
+  <h2 class="font-serif text-4xl font-bold">Coding with Love, Exploring the World.</h2>
+</legend>
+<div class="flex items-center gap-4 p-2 text-xl leading-4">
   <a href="https://github.com/xatloon" aria-label="GitHub" target="_blank" class=""><span class="i-mingcute-github-line"></span></a>
-  <a href="https://x.com/xatloon" aria-label="Twitter/X" target="_blank" class=""><span class="i-mingcute-twitter-line"></span></a>
+  <a href="https://x.com/xatloon" aria-label="Twitter/X" target="_blank" class=""><span class="i-mingcute-social-x-line"></span></a>
   <a href="https://t.me/xatloon" aria-label="Telegram" target="_blank" class=""><span class="i-mingcute-telegram-line"></span></a>
 </div>
-</intro>
+</section>
