@@ -1,17 +1,13 @@
 ---
-import { Image } from 'astro:assets'
 import HarvestCoverJpg from '@/assets/image/harvest-fields-in-westerham.jpg';
 ---
 
 <section
-  class="flex flex-col gap-4 p-6 pt-24 transition-all"
+  class="flex flex-col gap-4 bg-cover p-6 pt-24 transition-all"
+  style={{
+    backgroundImage: `url(${HarvestCoverJpg.src})`,
+  }}
 >
-<Image
-  class="fixed left-0 top-0 -z-10 h-1/2 object-cover"
-  src={HarvestCoverJpg}
-  loading="eager"
-  alt="Harvest Fields in Westerham"
-/>
 <legend>
   <h2 class="text-4xl">✨</h2>
   <h2 class="font-serif text-4xl font-bold">Coding with Love, Exploring the World.</h2>
