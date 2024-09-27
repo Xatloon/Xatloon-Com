@@ -1,15 +1,3 @@
-import antfu from '@antfu/eslint-config'
-import tailwind from 'eslint-plugin-tailwindcss'
+import { xat } from '@xats/eslint-config'
 
-export default antfu(
-  {
-    astro: true,
-    typescript: {
-      parserOptions: {
-        project: 'tsconfig.json',
-      },
-    },
-    formatters: true,
-  },
-  ...tailwind.configs['flat/recommended'],
-)
+export default xat()
