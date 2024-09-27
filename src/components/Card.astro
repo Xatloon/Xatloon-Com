@@ -2,14 +2,14 @@
 import type { AstroVNode } from 'astro/jsx-runtime'
 
 interface Props {
-  title: string
-  url: string
   label?: AstroVNode
   showRedirect?: boolean
   subtitle: string
+  title: string
+  url: string
 }
 
-const { title, url, subtitle, showRedirect } = Astro.props;
+const { url, title, subtitle, showRedirect } = Astro.props;
 ---
 <a href={url} target={showRedirect ? '_blank' : '_self'}>
   <div class="flex items-center justify-between gap-2 overflow-hidden rounded-xl p-4 ring-2 ring-slate-200 transition-all hover:ring-slate-950">

@@ -34,8 +34,8 @@ importers:
         specifier: ^0.5.15
         version: 0.5.15(tailwindcss@3.4.13)
       '@xats/eslint-config':
-        specifier: ^1.1.0
-        version: 1.1.0(eslint@9.11.1(jiti@2.0.0))(tailwindcss@3.4.13)(typescript@5.5.4)
+        specifier: ^1.1.1
+        version: 1.1.1(eslint@9.11.1(jiti@2.0.0))(tailwindcss@3.4.13)(typescript@5.5.4)
       eslint:
         specifier: ^9.11.1
         version: 9.11.1(jiti@2.0.0)
@@ -968,8 +968,8 @@ packages:
     resolution: {integrity: sha512-L4pm8L96OvE99FK+fZHQBXxsu+B/yvhf471Mf5o3idaq+pzptfpZcKKRXCeQKSAYbC80IV4Fm1V5dFxOHbDdPg==}
     engines: {node: '>=14'}
 
-  '@xats/eslint-config@1.1.0':
-    resolution: {integrity: sha512-cuRepyXQIDpUMSHf9XmOiJVuePGBhm0hqNIHYNo9VXesaSrW988LCATCr26tSLaKFjp7L7kGXQJa7fjNAZSN7Q==}
+  '@xats/eslint-config@1.1.1':
+    resolution: {integrity: sha512-Zx/g2m71XlGTYZfK70EFB5r8cO0Odi1Htv89u5WeWu+dSmvRjyPQSmkUEi0r3m116XbyexKAsF0Ewa7xtzi8MQ==}
     peerDependencies:
       eslint: ^9.5.0
 
@@ -4128,7 +4128,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@xats/eslint-config@1.1.0(eslint@9.11.1(jiti@2.0.0))(tailwindcss@3.4.13)(typescript@5.5.4)':
+  '@xats/eslint-config@1.1.1(eslint@9.11.1(jiti@2.0.0))(tailwindcss@3.4.13)(typescript@5.5.4)':
     dependencies:
       '@eslint-react/eslint-plugin': 1.14.2(eslint@9.11.1(jiti@2.0.0))(typescript@5.5.4)
       '@stylistic/eslint-plugin': 2.8.0(eslint@9.11.1(jiti@2.0.0))(typescript@5.5.4)

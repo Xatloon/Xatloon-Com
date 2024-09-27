@@ -1,19 +1,20 @@
 ---
+import { getCollection } from 'astro:content'
+
 import Card from '@/components/Card.astro'
 import Intro from '@/components/Intro.astro'
 import Layout from '@/layouts/BaseLayout/BaseLayout.astro'
-import { getCollection } from 'astro:content'
 
 const posts = await getCollection('posts')
 const lastestPosts = posts.sort((a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime())
 const lastestProjects = [{
   title: 'Matebook-14-2019-Hackintosh',
-  description: '🚀 Transform your MateBook 14 2019 into a Hackintosh',
   url: 'https://github.com/Xatloon/Matebook-14-2019-Hackintosh',
+  description: '🚀 Transform your MateBook 14 2019 into a Hackintosh',
 }, {
   title: 'Hexo-theme-anya',
-  description: '🧝‍♀️ A Hexo theme with both "lovely" and "elegant"',
   url: 'https://github.com/Xatloon/Hexo-theme-anya',
+  description: '🧝‍♀️ A Hexo theme with both "lovely" and "elegant"',
 }, {
   title: 'OpenCat.app',
   description: '👨‍🎨 Redesign OpenCat website',
@@ -32,8 +33,8 @@ const lastestProjects = [{
         {
           lastestPosts.map(project => (
 <Card
-  title={project.data.title}
   subtitle={new Date(project.data.publishedAt).toISOString().substring(0, 10)}
+  title={project.data.title}
   url={`/post/${project.slug}`}
 />
           ))
@@ -47,10 +48,10 @@ const lastestProjects = [{
         {
           lastestProjects.map(project => (
 <Card
-  title={project.title}
-  subtitle={project.description}
-  url={project.url}
   showRedirect
+  subtitle={project.description}
+  title={project.title}
+  url={project.url}
 />
 ))
         }

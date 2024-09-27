@@ -3,8 +3,8 @@ import { getIconCollections, iconsPlugin } from '@egoist/tailwindcss-icons'
 import typographyPlugin from '@tailwindcss/typography'
 
 export default {
-  content: ['./src/**/*.{astro,mdx,ts,tsx}'],
   darkMode: 'class',
+  content: ['./src/**/*.{astro,mdx,ts,tsx}'],
   plugins: [
     iconsPlugin({
       collections: getIconCollections(['mingcute']),
