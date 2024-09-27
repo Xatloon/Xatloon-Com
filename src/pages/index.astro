@@ -1,8 +1,8 @@
 ---
-import { getCollection } from 'astro:content'
-import Layout from '@/layouts/BaseLayout/BaseLayout.astro'
-import Intro from '@/components/Intro.astro'
 import Card from '@/components/Card.astro'
+import Intro from '@/components/Intro.astro'
+import Layout from '@/layouts/BaseLayout/BaseLayout.astro'
+import { getCollection } from 'astro:content'
 
 const posts = await getCollection('posts')
 const lastestPosts = posts.sort((a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime())

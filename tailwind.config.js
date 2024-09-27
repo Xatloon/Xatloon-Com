@@ -1,13 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 import { getIconCollections, iconsPlugin } from '@egoist/tailwindcss-icons'
+import typographyPlugin from '@tailwindcss/typography'
 
 export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ['./src/**/*.{astro,mdx,ts,tsx}'],
   darkMode: 'class',
   plugins: [
     iconsPlugin({
       collections: getIconCollections(['mingcute']),
     }),
-    require('@tailwindcss/typography'),
+    typographyPlugin(),
   ],
 }

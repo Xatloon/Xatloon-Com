@@ -1,20 +1,9 @@
 {
-  "extends": "astro/tsconfigs/strictest",
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "composite": true,
-    "jsx": "react-jsx",
-    "lib": ["ESNext"],
-    "moduleDetection": "force",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    },
-    "types": ["vite-plugin-font/src/font"],
-    "allowImportingTsExtensions": false,
-    "noPropertyAccessFromIndexSignature": true,
-    "downlevelIteration": true,
-    "allowSyntheticDefaultImports": true
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+    }
+  }
 }
