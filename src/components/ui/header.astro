@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets'
+
+import Avatar from '@/assets/image/avatar.webp'
+---
+
+<header class="fixed z-50 flex w-full items-center p-6">
+  <a href="/">
+    <Image
+      alt="Avatar"
+      class="rounded-full shadow-xl ring-1 ring-slate-200"
+      height={40}
+      loading="eager"
+      src={Avatar}
+      width={40}
+    />
+  </a>
+</header>
+

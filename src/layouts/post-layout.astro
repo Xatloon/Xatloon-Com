@@ -1,5 +1,5 @@
 ---
-import Layout from '@/layouts/BaseLayout/BaseLayout.astro'
+import Layout from '@/layouts/base-layout.astro'
 
 interface Props {
   publishedAt: string
@@ -17,6 +17,6 @@ const { title } = Astro.props
   <article
     class="prose max-w-none p-6 dark:prose-invert"
   >
-  <slot />
+    <slot />
   </article>
 </Layout>

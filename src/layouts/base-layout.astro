@@ -1,23 +1,23 @@
 ---
-import Footer from '@/layouts/BaseLayout/Footer.astro'
-import Header from '@/layouts/BaseLayout/Header.astro'
-import Meta from '@/layouts/BaseLayout/Meta.astro'
+import Footer from '@/components/ui/footer.astro'
+import Header from '@/components/ui/header.astro'
+import Meta from '@/components/ui/meta.astro'
 
 import '@/styles/base.css'
 
 interface Props {
   description?: string
-  title: string
+  title?: string
 }
 
-const { title, description } = Astro.props
+const { description = '✨ Coding with Love, Exploring the World.', title } = Astro.props
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <Meta description={description} />
-    <title>{title}</title>
+    <title>{title ? `${title} | Xat` : 'Hi, Xat!'}</title>
   </head>
   <body
     class="min-h-screen scroll-smooth bg-slate-50 bg-fixed text-slate-950 subpixel-antialiased"

@@ -9,7 +9,7 @@ interface Props {
   url: string
 }
 
-const { url, title, subtitle, showRedirect } = Astro.props;
+const { showRedirect, subtitle, title, url } = Astro.props;
 ---
 <a href={url} target={showRedirect ? '_blank' : '_self'}>
   <div class="flex items-center justify-between gap-2 overflow-hidden rounded-xl p-4 ring-2 ring-slate-200 transition-all hover:ring-slate-950">

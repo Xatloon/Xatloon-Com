@@ -1,61 +1,29 @@
 ---
 import { getCollection } from 'astro:content'
 
-import Card from '@/components/Card.astro'
-import Intro from '@/components/Intro.astro'
-import Layout from '@/layouts/BaseLayout/BaseLayout.astro'
+import Card from '@/components/card.astro'
+import Intro from '@/components/intro.astro'
+import Layout from '@/layouts/base-layout.astro'
 
-const posts = await getCollection('posts')
-const lastestPosts = posts.sort((a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime())
-const lastestProjects = [{
-  title: 'Matebook-14-2019-Hackintosh',
-  url: 'https://github.com/Xatloon/Matebook-14-2019-Hackintosh',
-  description: '🚀 Transform your MateBook 14 2019 into a Hackintosh',
-}, {
-  title: 'Hexo-theme-anya',
-  url: 'https://github.com/Xatloon/Hexo-theme-anya',
-  description: '🧝‍♀️ A Hexo theme with both "lovely" and "elegant"',
-}, {
-  title: 'OpenCat.app',
-  description: '👨‍🎨 Redesign OpenCat website',
-  url: 'https://github.com/waylybaye/opencat.app',
-}]
+const posts = await getCollection('post')
 ---
-
-<Layout title="Hi, Xat!">
+<Layout>
   <Intro />
   <main class="flex -translate-y-12 flex-col gap-4 rounded-t-xl bg-slate-50 p-6">
-      <div class="flex items-center gap-2 text-lg font-bold">
-        <span class="i-mingcute-quill-pen-fill"></span>
-        <span class="capitalize">recently published</span>
-      </div>
-      <div class="grid gap-4 sm:grid-cols-2">
-        {
-          lastestPosts.map(project => (
-<Card
-  subtitle={new Date(project.data.publishedAt).toISOString().substring(0, 10)}
-  title={project.data.title}
-  url={`/post/${project.slug}`}
-/>
-          ))
-        }
-      </div>
-      <div class="flex items-center gap-2 text-lg font-bold">
-        <span class="i-mingcute-rocket-fill"></span>
-        <span class="capitalize">latest projects</span>
-      </div>
-      <div class="grid gap-4 sm:grid-cols-2">
-        {
-          lastestProjects.map(project => (
-<Card
-  showRedirect
-  subtitle={project.description}
-  title={project.title}
-  url={project.url}
-/>
-))
-        }
-      </div>
-</main>
-
+    <div class="flex items-center gap-2 text-lg font-bold">
+      <span class="i-mingcute-quill-pen-fill"></span>
+      <span class="capitalize">recently published</span>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2">
+      {
+        posts.map(({ data: metaData, slug }) => (
+          <Card
+            subtitle={metaData.datePublishedAt.toString()}
+            title={metaData.title}
+            url={`/post/${slug}`}
+          />
+        ))
+      }
+    </div>
+  </main>
 </Layout>

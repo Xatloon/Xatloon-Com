@@ -31,9 +31,10 @@
     "typescriptreact",
     "json",
     "jsonc",
+    "html",
     "yaml",
     "toml",
-    "xml",
+    "html",
     "astro"
   ]
 }
