@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content'
+
+import Intro from '@/components/intro.astro'
+import Card from '@/components/ui/card.astro'
+import Layout from '@/layouts/base-layout.astro'
+
+const posts = await getCollection('post')
+---
+<Layout>
+  <Intro />
+  <main class="flex -translate-y-12 flex-col gap-4 rounded-t-xl bg-slate-50 p-6">
+    <div class="flex items-center gap-2 text-lg font-bold">
+      <span class="i-mingcute-quill-pen-fill"></span>
+      <span class="capitalize">recently published</span>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2">
+      {
+        posts.map(({ data: metaData, slug }) => (
+          <Card
+            subtitle={metaData.datePublishedAt.toString()}
+            title={metaData.title}
+            url={`/post/${slug}`}
+          />
+        ))
+      }
+    </div>
+  </main>
+</Layout>
