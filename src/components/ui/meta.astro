@@ -1,0 +1,31 @@
+---
+interface Props {
+  description: string
+}
+
+const { description } = Astro.props
+---
+
+<meta charset="UTF-8" />
+<meta
+  content={description}
+  name="description"
+/>
+<meta
+  content="width=device-width, initial-scale=1.0"
+  name="viewport"
+/>
+<meta
+  content="chrome=1"
+  http-equiv="X-UA-Compatible"
+/>
+<meta
+  content={Astro.generator}
+  name="generator"
+/>
+<link
+  href="/favicon.svg"
+  rel="icon"
+  type="image/svg+xml"
+/>
+

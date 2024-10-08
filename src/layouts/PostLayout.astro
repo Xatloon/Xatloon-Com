@@ -1,0 +1,22 @@
+---
+import Layout from '@/layouts/base-layout.astro'
+
+interface Props {
+  publishedAt: string
+  tags?: string[] | undefined
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<Layout title={`Xat - ${title}`}>
+  <h2
+    class="bg-gradient-to-r from-fuchsia-600 via-orange-600 to-pink-600 bg-clip-text p-6 pt-24 text-4xl font-black leading-loose text-transparent"
+  >{title}</h2>
+  <article
+    class="prose max-w-none p-6 dark:prose-invert"
+  >
+    <slot />
+  </article>
+</Layout>

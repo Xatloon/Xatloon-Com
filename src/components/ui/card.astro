@@ -1,0 +1,28 @@
+---
+import type { AstroVNode } from 'astro/jsx-runtime'
+
+interface Props {
+  label?: AstroVNode
+  showRedirect?: boolean
+  subtitle: string
+  title: string
+  url: string
+}
+
+const { showRedirect, subtitle, title, url } = Astro.props;
+---
+<a href={url} target={showRedirect ? '_blank' : '_self'}>
+  <div class="flex items-center justify-between gap-2 overflow-hidden rounded-xl p-4 ring-2 ring-slate-200 transition-all hover:ring-slate-950">
+    <div class="flex flex-col">
+      <h3 class="font-medium">
+        {title}
+      </h3>
+      <p class="text-sm text-gray-500">
+        {subtitle}
+      </p>
+    </div>
+    {showRedirect && (
+      <span class="i-mingcute-external-link-line text-base text-slate-500"></span>
+    )}
+  </div>
+</a>
